@@ -1,14 +1,15 @@
-#coding:utf-8
-import requests
+# coding:utf-8
+# import requests
 import logging
-from scrapy.spider import CrawlSpider
+from scrapy.spiders import CrawlSpider
 from scrapy.selector import Selector
-from PornHub.items import PornVideoItem
-from PornHub.pornhub_type import PH_TYPES
 from scrapy.http import Request
 import re
 import json
-import random
+
+# import random
+
+from spy.WebHubBot.PornHub.PornHub.pornhub_type import PH_TYPES
 
 
 class Spider(CrawlSpider):
@@ -16,7 +17,7 @@ class Spider(CrawlSpider):
     host = 'https://www.pornhub.com/'
     start_urls = list(set(PH_TYPES))
     logging.getLogger("requests").setLevel(logging.WARNING
-                                          )  # 将requests的日志级别设成WARNING
+                                           )  # 将requests的日志级别设成WARNING
     logging.basicConfig(
         level=logging.DEBUG,
         format=
@@ -50,7 +51,9 @@ class Spider(CrawlSpider):
             yield Request(url=self.host + url_next[0],
                           callback=self.parse_ph_key)
             # self.test = False
+
     def parse_ph_info(self, response):
+        from spy.WebHubBot.PornHub.PornHub.items import PornVideoItem
         phItem = PornVideoItem()
         selector = Selector(response)
         _ph_info = re.findall('flashvars_.*?=(.*?);\n', selector.extract())
