@@ -1,3 +1,4 @@
+![][py2x] [![GitHub forks][forks]][network] [![GitHub stars][stars]][stargazers] [![GitHub license][license]][lic_file]
 > 免责声明：本项目旨在学习Scrapy爬虫框架和MongoDB数据库，不可使用于商业和个人其他意图。若使用不当，均由个人承担。
 
 <img src="https://github.com/xiyouMc/PornHubBot/blob/master/img/WebHubCode2.png?raw=true" width = "700" height = "400" alt="图片名称" align=center />
@@ -28,9 +29,8 @@
 
 ### 启动前配置
 
-* 安装MongoDB,并启动，不需要配置
-* 安装Scrapy
-* 安装Python的依赖模块：pymongo、json、requests
+* 安装MongoDB，并启动，不需要配置
+* 安装Python的依赖模块：Scrapy, pymongo, requests 或 `pip install -r requirements.txt`
 * 根据自己需要修改 Scrapy 中关于 间隔时间、启动Requests线程数等得配置
 
 ### 启动
@@ -52,3 +52,17 @@
 	image_url:视频的封面链接
 	video_duration:视频的时长，以 s 为单位
 	quality_480p: 视频480p的 mp4 下载地址
+
+
+[py2x]: https://img.shields.io/badge/python-2.x-brightgreen.svg
+[issues_img]: https://img.shields.io/github/issues/xiyouMc/WebHubBot.svg
+[issues]: https://github.com/xiyouMc/WebHubBot/issues
+
+[forks]: https://img.shields.io/github/forks/xiyouMc/WebHubBot.svg
+[network]: https://github.com/xiyouMc/WebHubBot/network
+
+[stars]: https://img.shields.io/github/stars/xiyouMc/WebHubBot.svg
+[stargazers]: https://github.com/xiyouMc/WebHubBot/stargazers
+
+[license]: https://img.shields.io/badge/license-MIT-blue.svg
+[lic_file]: https://raw.githubusercontent.com/xiyouMc/WebHubBot/master/LICENSE
